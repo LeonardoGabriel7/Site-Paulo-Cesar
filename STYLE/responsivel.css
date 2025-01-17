@@ -1,0 +1,39 @@
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+      flex-direction: row;  /* Garante que o conteúdo fique em linha (horizontal) */
+      justify-content: flex-start;  /* Alinha logo à esquerda e ícone à esquerda */
+      align-items: center;  /* Alinha logo e menu na mesma linha */
+    }
+  
+    nav ul {
+      width: 100%;  /* Faz o menu ocupar toda a largura disponível */
+      display: none;  /* O menu começa escondido */
+      flex-direction: column;  /* Organiza os itens do menu em coluna */
+      margin-top: 10px;  /* Adiciona uma margem superior para o menu aparecer abaixo do ícone */
+    }
+  
+    nav ul li {
+      text-align: left;  /* Alinha os itens do menu à esquerda */
+      margin: 10px 0;  /* Adiciona espaçamento entre os itens do menu */
+    }
+  
+    nav ul li a {
+      padding: 10px;
+      width: 100%;
+      display: block;
+      font-size: 1.2em;
+    }
+  
+    .menu-toggle {
+      display: block;  /* Exibe o ícone do menu hambúrguer */
+      font-size: 2em;
+      cursor: pointer;
+      color: white;
+    }
+  
+    /* Exibe o menu ao clicar no ícone hambúrguer */
+    nav ul.show {
+      display: flex;
+    }
+  }
