@@ -4,7 +4,7 @@
     display: block; /* Exibe o ícone apenas no modo responsivo */
     font-size: 2em;
     cursor: pointer;
-    color: black;
+    color: red;
     margin-right: 10px; /* Espaço do lado direito */
   }
 
@@ -40,10 +40,15 @@
   }
 
   header {
+    height: 90px;
     justify-content: space-between; /* Alinha a logo e o ícone */
     align-items: center; /* Centraliza verticalmente */
   }
-}
+
+  .logo img{
+    width: 150px;
+    height: 10px;
+  }
 
 
 
