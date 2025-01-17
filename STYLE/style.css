@@ -51,14 +51,21 @@ nav ul li a:hover {
 
 
 
-
-
-
-
+/* Estilos gerais para a imagem */
 .imagem-responsiva {
   width: 100%; /* A imagem ocupa toda a largura do contêiner */
-  height: auto; /* Mantém a proporção original da imagem */
+  height: 600px; /* Altura para desktop */
   display: block; /* Garante que não haja espaço adicional ao redor da imagem */
 }
+
+/* Estilos para telas menores que 520px */
+@media (max-width: 520px) {
+  .imagem-responsiva {
+    height: 450px; /* Altura para mobile */
+  }
+}
+
+
+
 
 
