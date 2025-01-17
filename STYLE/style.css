@@ -1,6 +1,8 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -52,15 +54,11 @@ nav ul li a:hover {
 
 
 
-  main{
-    background-color:black;
-    height: 300px;
-  }
 
-  main img{
-    width: 100%;
-    height: 700px ;
-  }
-  
+.imagem-responsiva {
+  width: 100%; /* A imagem ocupa toda a largura do contêiner */
+  height: auto; /* Mantém a proporção original da imagem */
+  display: block; /* Garante que não haja espaço adicional ao redor da imagem */
+}
 
-  
+

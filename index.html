@@ -30,11 +30,11 @@
 
 
 
-
   <main>
-   <img src="imagens/BANER PRINCIPAL.png" alt="">
+    <picture>
+      <!-- Imagem para telas menores (mobile) -->
+      <source media="(max-width: 520px)" srcset="imagens/banerPrincipalMobile.png" type="image/png">
+      <!-- Imagem padrão para telas maiores (desktop) -->
+      <img src="imagens/BANER PRINCIPAL.png" alt="Banner principal" class="imagem-responsiva">
+    </picture>
   </main>
-
-
-</body>
-</html>
