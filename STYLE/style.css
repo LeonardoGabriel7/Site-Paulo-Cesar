@@ -12,7 +12,7 @@
   
   /* Estilos do Header */
   header {
-    background-color: #007bff;
+    background-color: var(---white);
     color: white;
     padding: 10px 20px;
     display: flex;
@@ -21,10 +21,10 @@
     position: relative;
   }
   
-  header .logo {
-    font-size: 1.8em;
-    font-weight: bold;
+  header .logo img{
+    height: 80px;
   }
+  
   
   /* Menu de Navegação */
   nav ul {
@@ -38,7 +38,7 @@
   
   nav ul li a {
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 1.1em;
     transition: color 0.3s ease;
   }
@@ -53,4 +53,14 @@
     font-size: 2em;
     cursor: pointer;
     color: white;
+  }
+
+
+
+
+
+
+  main{
+    height: 700px;
+    background-color: black;
   }
