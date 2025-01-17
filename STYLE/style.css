@@ -1,16 +1,11 @@
-/* Estilos Globais */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+
   
   body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
   }
   
-  /* Estilos do Header */
+
   header {
     background-color: var(---white);
     color: white;
@@ -22,11 +17,9 @@
   }
   
   header .logo img{
-    height: 80px;
+    height: 70px;
   }
   
-  
-  /* Menu de Navegação */
   nav ul {
     list-style: none;
     display: flex;
@@ -44,7 +37,7 @@
   }
   
   nav ul li a:hover {
-    color: #ffdd57;
+    color: var(---red);
   }
   
   /* Menu Hambúrguer */
@@ -52,13 +45,8 @@
     display: none;
     font-size: 2em;
     cursor: pointer;
-    color: white;
+    color: var(---black);
   }
-
-
-
-
-
 
   main{
     height: 700px;
