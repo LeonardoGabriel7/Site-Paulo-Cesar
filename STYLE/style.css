@@ -6,7 +6,7 @@ body {
 }
 
 header {
-  background-color: white; /* Corrigi a variável incorreta */
+  background-color: white; 
   color: black;
   padding: 10px 20px;
   display: flex;
@@ -21,7 +21,7 @@ header .logo img {
 
 nav ul {
   list-style: none;
-  display: flex; /* Menu visível em telas grandes */
+  display: flex; 
 }
 
 nav ul li {
@@ -36,36 +36,212 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: red; /* Corrigi a variável incorreta */
+  color: red; 
 }
 
 /* Menu Hambúrguer */
 .menu-toggle {
-  display: none; /* Oculto em telas grandes */
+  display: none; 
   font-size: 2em;
   cursor: pointer;
   color: black;
 }
 
-
-
-
-
-/* Estilos gerais para a imagem */
 .imagem-responsiva {
-  width: 100%; /* A imagem ocupa toda a largura do contêiner */
-  height: 600px; /* Altura para desktop */
-  display: block; /* Garante que não haja espaço adicional ao redor da imagem */
+  width: 100%; 
+  height: 600px; 
+  display: block; 
 }
 
-/* Estilos para telas menores que 520px */
+
 @media (max-width: 520px) {
   .imagem-responsiva {
-    height: 450px; /* Altura para mobile */
+    height: 450px; 
   }
 }
 
 
 
+/* patrocinadores*/
+
+.patrocinadores {
+  text-align: center; /* Centraliza o conteúdo dentro da div */
+  height: 400px;
+  background-color: black;
+}
+
+.patrocinadores h1 {
+  font-size: 3em; /* Aumenta o tamanho do título */
+  color: #ffffff; /* Cor destacada */
+  margin-bottom: 30px; /* Espaçamento abaixo do título */
+  padding-top: 60px;
+}
+
+.imagens-patrocinadores {
+  display: flex; /* Alinha as imagens lado a lado */
+  justify-content: center; /* Centraliza as imagens horizontalmente */
+  gap: 50px; /* Maior espaçamento entre as imagens */
+}
+
+.imagens-patrocinadores img {
+  width: 200px; /* Define uma largura maior para todas as imagens */
+  height: auto; /* Mantém a proporção das imagens */
+  border: 3px solid #ddd; /* Adiciona uma borda mais visível */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra maior às imagens */
+  transition: transform 0.3s ease; /* Efeito de transição */
+}
+
+.imagens-patrocinadores img:hover {
+  transform: scale(1.2); /* Aumenta mais ao passar o mouse */
+}
 
 
+
+
+/* Seção Sobre */
+.sobre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+  background-color: #000; /* Fundo preto */
+  text-align: center;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Título */
+.sobre h1 {
+  font-size: 3em;
+  margin-top: 40px; /* Ajustado para ficar abaixo da divisória */
+  margin-bottom: 0px; /* Espaçamento entre o título e o conteúdo */
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.3); /* Sombra suave no texto */
+}
+
+/* Container que contém a imagem e o texto */
+.conteudo-sobre {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px; /* Distância entre a imagem e o texto */
+  text-align: left;
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 40px; /* Distância abaixo do título */
+}
+
+/* Estilo da imagem com borda vermelha */
+.imagem-sobre {
+  border: 5px solid #f00;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 15px rgba(255, 255, 255, 0.2);
+}
+
+.imagem-sobre img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+/* Estilo do texto */
+.texto-sobre {
+  flex: 1;
+  font-size: 1.2em;
+  line-height: 1.8;
+  padding: 20px;
+  color: #fff;
+}
+
+.texto-sobre p {
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.texto-sobre p:first-child {
+  font-weight: bold;
+}
+
+.texto-sobre p:last-child {
+  font-style: italic;
+}
+
+/* Divisórias vermelhas no topo e na parte inferior */
+.divider-top {
+  width: 100%;
+  height: 5px;
+  background-color: #f00;
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.3);
+}
+
+.divider-bottom {
+  width: 100%;
+  height: 5px;
+  background-color: #f00;
+  box-shadow: 0px 4px 6px rgba(255, 0, 0, 0.3);
+  margin-top: 50px;
+}
+
+/* Estilos do botão de contato */
+.botao-contato {
+  margin-top: 30px;
+  padding: 15px 30px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  text-align: center;
+  animation: pulsar 1.5s infinite; /* Animação de pulsação */
+  margin-left: 25%; /* Ajuste para deslocar o botão para a direita */
+}
+
+.botao-contato:hover {
+  background-color: #d10000;
+}
+
+/* Animação de pulsação mais suave */
+@keyframes pulsar {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05); /* Menos intensidade na pulsação */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .conteudo-sobre {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .imagem-sobre img {
+    max-width: 100%;
+  }
+
+  .texto-sobre {
+    padding: 10px;
+  }
+
+  .botao-contato {
+    width: 100%;
+  }
+}
