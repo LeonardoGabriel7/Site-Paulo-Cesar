@@ -92,3 +92,86 @@
     </div>
   </div>
 </div>
+
+
+
+<!-- LOJA -->
+
+<div class="loja">
+  <h1>LOJA DO CANAL</h1>
+  <div class="produtos">
+    <div class="produto">
+      <img src="produto1.jpg" alt="Produto 1">
+      <h2>Produto 1</h2>
+      <p>Descrição breve do produto 1.</p>
+      <button onclick="mostrarModal(1)">Ver Mais</button>
+    </div>
+    <div class="produto">
+      <img src="produto2.jpg" alt="Produto 2">
+      <h2>Produto 2</h2>
+      <p>Descrição breve do produto 2.</p>
+      <button onclick="mostrarModal(2)">Ver Mais</button>
+    </div>
+    <div class="produto">
+      <img src="produto3.jpg" alt="Produto 3">
+      <h2>Produto 3</h2>
+      <p>Descrição breve do produto 3.</p>
+      <button onclick="mostrarModal(3)">Ver Mais</button>
+    </div>
+    <div class="produto">
+      <img src="produto4.jpg" alt="Produto 4">
+      <h2>Produto 4</h2>
+      <p>Descrição breve do produto 4.</p>
+      <button onclick="mostrarModal(4)">Ver Mais</button>
+    </div>
+    <div class="produto">
+      <img src="produto5.jpg" alt="Produto 5">
+      <h2>Produto 5</h2>
+      <p>Descrição breve do produto 5.</p>
+      <button onclick="mostrarModal(5)">Ver Mais</button>
+    </div>
+    <div class="produto">
+      <img src="produto6.jpg" alt="Produto 6">
+      <h2>Produto 6</h2>
+      <p>Descrição breve do produto 6.</p>
+      <button onclick="mostrarModal(6)">Ver Mais</button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <h2 id="modal-titulo">Título do Produto</h2>
+    <p id="modal-descricao">Descrição detalhada do produto.</p>
+    <button onclick="fecharModal()">Fechar</button>
+  </div>
+</div>
+
+<script>
+  function mostrarModal(produtoId) {
+    const titulo = document.getElementById("modal-titulo");
+    const descricao = document.getElementById("modal-descricao");
+
+    // Conteúdo específico para cada produto
+    const produtos = {
+      1: { titulo: "Produto 1", descricao: "Descrição completa do produto 1." },
+      2: { titulo: "Produto 2", descricao: "Descrição completa do produto 2." },
+      3: { titulo: "Produto 3", descricao: "Descrição completa do produto 3." },
+      4: { titulo: "Produto 4", descricao: "Descrição completa do produto 4." },
+      5: { titulo: "Produto 5", descricao: "Descrição completa do produto 5." },
+      6: { titulo: "Produto 6", descricao: "Descrição completa do produto 6." }
+    };
+
+    titulo.textContent = produtos[produtoId].titulo;
+    descricao.textContent = produtos[produtoId].descricao;
+
+    document.getElementById("modal").style.display = "flex";
+  }
+
+  function fecharModal() {
+    document.getElementById("modal").style.display = "none";
+  }
+</script>
+</body>
+</html>
