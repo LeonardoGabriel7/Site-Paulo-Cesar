@@ -62,42 +62,6 @@ nav ul li a:hover {
 
 
 
-/* patrocinadores*/
-
-.patrocinadores {
-  text-align: center; /* Centraliza o conteúdo dentro da div */
-  height: 400px;
-  background-color: black;
-}
-
-.patrocinadores h1 {
-  font-size: 3em; /* Aumenta o tamanho do título */
-  color: #ffffff; /* Cor destacada */
-  margin-bottom: 30px; /* Espaçamento abaixo do título */
-  padding-top: 60px;
-}
-
-.imagens-patrocinadores {
-  display: flex; /* Alinha as imagens lado a lado */
-  justify-content: center; /* Centraliza as imagens horizontalmente */
-  gap: 50px; /* Maior espaçamento entre as imagens */
-}
-
-.imagens-patrocinadores img {
-  width: 200px; /* Define uma largura maior para todas as imagens */
-  height: auto; /* Mantém a proporção das imagens */
-  border: 3px solid #ddd; /* Adiciona uma borda mais visível */
-  border-radius: 10px; /* Bordas arredondadas */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Adiciona uma sombra maior às imagens */
-  transition: transform 0.3s ease; /* Efeito de transição */
-}
-
-.imagens-patrocinadores img:hover {
-  transform: scale(1.2); /* Aumenta mais ao passar o mouse */
-}
-
-
-
 
 /* Seção Sobre */
 .sobre {
@@ -245,3 +209,122 @@ nav ul li a:hover {
     width: 100%;
   }
 }
+
+
+
+
+
+/* PATROCINADORES */
+.patrocinadores {
+  text-align: center;
+  background-color: black;
+  padding: 60px 20px;
+}
+
+.patrocinadores h1 {
+  font-size: 3em;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.imagens-patrocinadores {
+  display: flex;
+  justify-content: center;
+  gap: 60px; /* Espaçamento entre os patrocinadores */
+  flex-wrap: wrap; /* Permite quebra de linha para telas menores */
+}
+
+.patrocinador {
+  display: flex;
+  flex-direction: column; /* Alinha a imagem e o botão verticalmente */
+  align-items: center; /* Centraliza tudo no eixo horizontal */
+  gap: 25px; /* Espaçamento entre a imagem e o botão */
+  width: 230px; /* Largura fixa para cada patrocinador */
+}
+
+.patrocinador img {
+  width: 240px; /* Largura ajustada ao container */
+  height: 230px; /* Altura fixa */
+  object-fit: cover; /* Recorta a imagem mantendo o foco principal */
+  border: 3px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.patrocinador img.p2{
+  padding: 15px;
+}
+
+.patrocinador img:hover {
+  transform: scale(1.2); /* Efeito ao passar o mouse */
+}
+
+.botao-patrocinador {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  text-align: center;
+}
+
+.botao-patrocinador:hover {
+  background-color: #d10000;
+  transform: scale(1.05);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .imagens-patrocinadores {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .patrocinador {
+    width: 100%;
+    max-width: 300px; /* Limita a largura em telas pequenas */
+  }
+
+  .patrocinador img {
+    max-width: 100%; /* Imagem ocupa toda a largura do container */
+  }
+}
+
+.botao-patrocinador {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #f00;
+  color: #fff;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  text-align: center;
+  animation: pulsar 1.5s infinite; /* Animação de pulsação */
+}
+
+.botao-patrocinador:hover {
+  background-color: #d10000;
+  transform: scale(1.05);
+}
+
+/* Animação de pulsação */
+@keyframes pulsar {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+
+
