@@ -50,9 +50,61 @@
     height: 10px;
   }
 
-
+}
 
 /* MAIN */
 
 
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+    color: red;
+    margin-right: 10px;
+  }
 
+  nav ul {
+    display: none;
+    flex-direction: column;
+    background-color: white;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .conteudo-sobre {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .imagem-sobre img {
+    max-width: 100%;
+  }
+
+  .botao-contato {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .produto {
+    flex: 1 1 calc(50% - 40px);
+    max-width: calc(50% - 40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .produto {
+    flex: 1 1 calc(100% - 40px);
+    max-width: calc(100% - 40px);
+  }
+}
