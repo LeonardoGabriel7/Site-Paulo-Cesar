@@ -25,23 +25,11 @@ function verMais(id) {
       { titulo: "Camisa 6", imagem: "camisa6.jpg", descricao: "Descrição da Camisa 6.", preco: "R$ 75,00" }
   ];
 
-  // Preenche o modal com os dados do produto selecionado
-  titulo.textContent = produtos[id - 1].titulo;
-  imagem.src = produtos[id - 1].imagem;
-  descricao.textContent = produtos[id - 1].descricao;
-  preco.textContent = produtos[id - 1].preco;
+ 
 
   // Exibe o modal
   modal.style.display = "block";
 }
-
-// Função para fechar o modal
-function fecharModal() {
-  const modal = document.getElementById('modal');
-  modal.style.display = "none";
-}
-
-
 
 
 
@@ -56,5 +44,53 @@ document.querySelectorAll('.zoom-container img').forEach(img => {
       const moveY = (y / height) * 100;
       
       this.style.transformOrigin = `${moveX}% ${moveY}%`;
+  });
+});
+
+
+
+
+// Função para trocar entre as imagens (frente e verso)
+function trocarImagem(botao, direcao) {
+  const container = botao.closest('.imagem-container');
+  const imagemPrincipal = container.querySelector('.imagem-principal');
+  const imagemVerso = container.querySelector('.imagem-verso');
+
+  if (direcao === 1) {
+    // Mostra o verso
+    imagemPrincipal.style.display = 'none';
+    imagemVerso.style.display = 'block';
+  } else {
+    // Mostra a frente
+    imagemPrincipal.style.display = 'block';
+    imagemVerso.style.display = 'none';
+  }
+}
+
+
+
+
+
+// descer devagar na parte sobre
+
+// Rolagem suave para links internos
+document.querySelectorAll('nav a').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+
+      // Verifica se o link é interno (começa com #)
+      if (targetId.startsWith('#')) {
+          e.preventDefault(); // Impede o comportamento padrão apenas para links internos
+
+          const targetSection = document.querySelector(targetId); // Seleciona a seção
+
+          if (targetSection) {
+              targetSection.scrollIntoView({
+                  behavior: 'smooth', // Rolagem suave
+                  block: 'start'     // Alinha o topo da seção com o topo da viewport
+              });
+          }
+      }
+      // Links externos (como Instagram, YouTube e WhatsApp) funcionam normalmente
   });
 });

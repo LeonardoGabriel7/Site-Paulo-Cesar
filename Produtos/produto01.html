@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blusa Punto Preta | Paulo Scárdua YT</title>
+    <link rel="stylesheet" href="../STYLE/normal.css">
+    <link rel="stylesheet" href="../STYLE/style.css">
+    <link rel="stylesheet" href="../STYLE/responsivel.css">
+    <script defer src="../script.js"></script>
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* HEADER */
+        header {
+            background-color: #000; /* Cabeçalho preto */
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        header .logo img {
+            max-width: 150px;
+        }
+
+        header nav ul {
+            display: flex;
+            list-style-type: none;
+        }
+
+        header nav ul li {
+            margin-left: 20px;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #ff0000; /* Cor de hover vermelha */
+        }
+
+        header .menu-toggle {
+            display: none;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Menu responsivo */
+        @media (max-width: 768px) {
+            header nav {
+                display: none;
+            }
+
+            header .menu-toggle {
+                display: block;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                position: absolute;
+                top: 50px;
+                right: 0;
+                background-color: #000; /* Fundo preto no menu */
+                width: 200px;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            }
+
+            header nav ul li {
+                margin: 10px 0;
+            }
+        }
+
+        /* PAGINA DO PRODUTO */
+        .produto-page {
+            padding: 50px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .produto-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+        }
+
+        /* Container das imagens */
+        .imagem-container {
+            width: 45%;
+            position: relative;
+        }
+
+        .imagem-container img {
+            width: 50%;
+            height: auto;
+            border: 2px solid #ccc;
+            border-radius: 8px;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Setas para navegação */
+        .seta {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            font-size: 30px;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .seta-esquerda {
+            left: 0;
+        }
+
+        .seta-direita {
+            right: 0;
+        }
+
+        /* Descrição do produto e detalhes */
+        .produto-info, .detalhes-produto {
+            width: 50%;
+            padding-left: 20px;
+        }
+
+        .produto-info h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .produto-info .descricao {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .produto-info .preco {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #ff0000; /* Cor do preço em vermelho */
+        }
+
+        .produto-info .botao-contato {
+            display: inline-block;
+            background-color: #ff0000; /* Botão vermelho */
+            color: #fff;
+            padding: 12px 20px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .produto-info .botao-contato:hover {
+            background-color: #cc0000; /* Cor do hover no botão */
+        }
+
+        .detalhes-produto h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #333;
+        }
+
+        .detalhes-produto ul {
+            list-style-type: none;
+        }
+
+        .detalhes-produto ul li {
+            font-size: 16px;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 768px) {
+            .produto-details {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .produto-details .imagem-container {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+            .produto-details .produto-info {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .imagem-container img {
+                max-width: 100%;
+            }
+        }
+
+        /* FOOTER */
+        .footer {
+            background-color: #000; /* Fundo preto no footer */
+            color: #fff;
+            padding: 40px 20px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .footer-section p, .footer-section a {
+            color: #ddd;
+            font-size: 16px;
+        }
+
+        .footer-section a:hover {
+            color: #ff0000; /* Cor do hover nos links */
+        }
+
+        .social-links {
+            list-style-type: none;
+        }
+
+        .social-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #aaa;
+        }
+
+    </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+        <img src="../imagens/logo paulo.jpg" alt="Logo Paulo Scárdua">
+    </div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <nav>
+      <ul>
+        <li><a href="../#home">Home</a></li>
+        <li><a href="../#sobre">Sobre</a></li>
+        <li><a href="https://www.instagram.com/bravotjet_white/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.youtube.com/@PauloSc%C3%A1rduaYT" target="_blank">Youtube</a></li>
+        <li><a href="https://api.whatsapp.com/send?phone=5555319765289&text=Ol%C3%A1" target="_blank"> WhatsApp</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- PAGINA DO PRODUTO -->
+  <main class="produto-page">
+
+    <!-- Seção de Detalhes do Produto -->
+    <section class="produto-details">
+      <div class="imagem-container">
+        <!-- Imagens com setas para navegação -->
+        <img src="../imagens/camisas/camisa1-frente.png" alt="Blusa Punto Preta - Frente" class="imagem-produto" id="imgProduto">
+        <button class="seta seta-esquerda" onclick="mudarImagem(-1)">&#10094;</button>
+        <button class="seta seta-direita" onclick="mudarImagem(1)">&#10095;</button>
+      </div>
+
+      <div class="produto-info">
+        <h1>Blusa Punto Preta</h1>
+        <p class="descricao">Uma blusa moderna e confortável para o seu dia a dia. Feita com material de alta qualidade, perfeita para combinar com qualquer look. Ideal para ocasiões casuais ou para um estilo descontraído.</p>
+        <p class="preco">R$ 50,00</p>
+        <a href="https://api.whatsapp.com/send?phone=5555319765289&text=Ol%C3%A1%2C%20quero%20comprar%20a%20Blusa%20Punto%20Preta" target="_blank" class="botao-contato">Comprar via WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Seção de Detalhes do Produto -->
+    <section class="detalhes-produto">
+      <h2>Detalhes do Produto</h2>
+      <ul>
+        <li><strong>Material:</strong> Algodão de alta qualidade</li>
+        <li><strong>Cor:</strong> Preta</li>
+        <li><strong>Tamanhos Disponíveis:</strong> P, M, G, GG</li>
+        <li><strong>Cuidados:</strong> Lavar à máquina, não usar alvejante</li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+          <h3>Paulo Scárdua YT</h3>
+          <p>Seja bem-vindo ao site oficial do Paulo Scárdua! Aqui você encontra camisas, canecas e outros produtos exclusivos.</p>
+      </div>
+      <div class="footer-section">
+          <h3>Links Úteis</h3>
+          <ul>
+              <li><a href="../#home">Home</a></li>
+              <li><a href="../#sobre">Sobre</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Redes Sociais</h3>
+          <ul class="social-links">
+              <li><a href="https://www.instagram.com/bravotjet_white/" target="_blank"><img src="../imagens/insta.jpeg" alt="Instagram"> Instagram</a></li>
+              <li><a href="https://www.youtube.com/@PauloSc%C3%A1rduaYT" target="_blank"><img src="../imagens/yt.png" alt="Youtube"> Youtube</a></li>
+              <li><a href="https://wa.me/5555319765289?text=Ol%C3%A1" target="_blank"><img src="../imagens/wpp.png" alt="WhatsApp"> WhatsApp</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+          <h3>Contato</h3>
+          <p>Email: paulocscjunior@gmail.com</p>
+          <p>Telefone: (31) 9765-2898</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2025 Paulo Scárdua YT. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+      let imagens = [
+          "../imagens/camisas/camisa1-frente.png",
+          "../imagens/camisas/camisa2-frente.png",
+          "../imagens/camisas/camisa3-frente.png"
+      ];
+      let indexImagem = 0;
+
+      function mudarImagem(direcao) {
+          indexImagem += direcao;
+          if (indexImagem < 0) indexImagem = imagens.length - 1;
+          if (indexImagem >= imagens.length) indexImagem = 0;
+          document.getElementById("imgProduto").src = imagens[indexImagem];
+      }
+  </script>
+
+</body>
+</html>

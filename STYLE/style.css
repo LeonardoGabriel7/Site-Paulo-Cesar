@@ -3,6 +3,7 @@ body {
   background-color: #f8f9fa;
   margin: 0;
   padding: 0;
+ 
 }
 
 header {
@@ -333,11 +334,8 @@ nav ul li a:hover {
 
 
 
-/* loja */
-
-
-
-.cor{
+/* ========== LOJA ========== */
+.cor {
   background-color: #000;
 }
 
@@ -346,33 +344,73 @@ nav ul li a:hover {
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 20px;
-  gap: 20px; /* Espaço entre os produtos */
-  max-width: 1200px; /* Limita a largura máxima do container */
-  margin: 0 auto; /* Centraliza o container na página */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .produto {
   color: #000;
   background-color: #fff;
-  border: 3px solid #f00; /* Borda vermelha */
-  border-radius: 10px; /* Bordas arredondadas */
-  overflow: hidden; /* Garante que nada ultrapasse o container */
+  border: 3px solid #f00;
+  border-radius: 10px;
+  overflow: hidden;
   text-align: center;
   padding: 20px;
-  flex: 1 1 calc(33.333% - 40px); /* 3 colunas fixas */
-  max-width: calc(33.333% - 40px); /* Largura máxima para 3 colunas */
-  box-sizing: border-box; /* Inclui padding e borda no cálculo do tamanho */
+  flex: 1 1 calc(33.333% - 40px);
+  max-width: calc(33.333% - 40px);
+  box-sizing: border-box;
 }
 
-.produto img {
-  width: 200px;
-  height: 270px;
-  object-fit: contain; /* Alterado para "contain" */
-  border-radius: 8px;
-  margin-bottom: 15px;
-  border: 1px solid #f00;
-  
+/* Container da imagem e setas */
+.imagem-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px; /* Espaço entre as setas e a imagem */
 }
+
+.zoom-container {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 250px; /* Largura do container */
+  height: 250px; /* Reduzi a altura para diminuir a borda */
+  border: 1px solid #f00; /* Borda vermelha */
+  border-radius: 8px;
+  padding: 5px; /* Espaço entre a borda e a imagem */
+}
+
+.zoom-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta a imagem para preencher melhor */
+  transition: transform 0.4s ease;
+  cursor: url('imagens/lupa.png'), zoom-in; /* Cursor de lupa personalizado */
+}
+
+/* Efeito de zoom ao passar o mouse */
+.zoom-container:hover img {
+  transform: scale(2); /* Aumenta a imagem ao passar o mouse */
+  transform-origin: center;
+}
+
+/* Estilo das setas */
+.arrow {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
 .produto h3 {
   font-size: 1.2em;
   margin: 10px 0;
@@ -397,95 +435,12 @@ nav ul li a:hover {
 }
 
 .produto button:hover {
-  background-color: rgb(206, 9, 9)
+  background-color: rgb(206, 9, 9);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6); /* Efeito de brilho ao redor */
 }
 
 
 
-/* Ajusta o container de zoom */
-.zoom-container {
-  position: relative;
-  overflow: hidden;
-  display: inline-block;
-  cursor: zoom-in; /* Muda o cursor para indicar zoom */
-  width: 200px; /* Mantém todas as imagens com o mesmo tamanho */
-  height: 270px;
-}
-
-/* Ajusta as imagens para preencher corretamente o container */
-.zoom-container img {
-  width: 100%; /* Garante que todas as imagens tenham o mesmo tamanho */
-  height: 100%;
-  object-fit: contain; /* Mantém a proporção sem cortar a imagem */
-  transition: transform 0.3s ease; /* Suaviza o efeito */
-}
-
-/* Efeito de zoom */
-.zoom-container:hover img {
-  transform: scale(2.0); /* Aumenta a imagem */
-  transform-origin: center; /* Mantém o zoom centralizado */
-}
-
-
-
-
-
-
-
-
-
-
-
-/* Estilos do Modal */
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.modal-content {
-  background-color: #fff;
-  margin: 10% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  max-width: 500px;
-  border-radius: 10px;
-  text-align: center;
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.close:hover {
-  color: #000;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-  .produto {
-      flex: 1 1 calc(50% - 40px); /* 2 colunas em telas menores */
-      max-width: calc(50% - 40px);
-  }
-}
-
-@media (max-width: 480px) {
-  .produto {
-      flex: 1 1 calc(100% - 40px); /* 1 coluna em telas muito pequenas */
-      max-width: calc(100% - 40px);
-  }
-}
 
 
 
