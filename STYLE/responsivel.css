@@ -108,3 +108,55 @@
     max-width: calc(100% - 40px);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsividade SOMENTE para celulares */
+@media (max-width: 768px) {
+  .imagens-patrocinadores {
+    flex-direction: column; /* Muda para coluna em telas menores */
+    align-items: center;
+    gap: 30px;
+  }
+
+  .patrocinador {
+    width: 100%; /* Mantém largura fixa para alinhamento */
+    max-width: 250px;
+  }
+
+  .patrocinador img {
+    width: 100%; /* Ajusta a imagem para o tamanho correto */
+    max-width: 240px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .produtos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .produto {
+    flex: 1 1 100%;
+    max-width: 90%;
+  }
+}
