@@ -140,6 +140,16 @@
             padding-left: 20px;
         }
 
+        .detalhes-produto {
+    background-color: rgb(206, 183, 183);
+    text-align: center;
+    max-width: 800px; /* Define um limite de largura */
+    margin: 30px auto 0; /* Espaço acima e centralização horizontal */
+    padding: 20px; /* Espaçamento interno */
+    border-radius: 10px; /* Bordas arredondadas */
+    clear: both; /* Garante que não fique ao lado de outros elementos */
+}
+
         .produto-info h1 {
             font-size: 28px;
             margin-bottom: 10px;
@@ -283,45 +293,25 @@
 
   <!-- PAGINA DO PRODUTO -->
   <main class="produto-page">
-
-    <!-- Seção de Detalhes do Produto -->
     <section class="produto-details">
       <div class="imagem-container">
-        <!-- Imagens com setas para navegação -->
         <img src="../imagens/camisas/camisa1-frente.png" alt="Blusa Punto Preta - Frente" class="imagem-produto" id="imgProduto">
         <button class="seta seta-esquerda" onclick="mudarImagem(-1)">&#10094;</button>
         <button class="seta seta-direita" onclick="mudarImagem(1)">&#10095;</button>
       </div>
-
       <div class="produto-info">
         <h1>Blusa Punto Preta</h1>
         <p class="preco">R$ 50,00</p>
         <a href="https://api.whatsapp.com/send?phone=5555319765289&text=Ol%C3%A1%2C%20quero%20comprar%20a%20Blusa%20Punto%20Preta" target="_blank" class="botao-contato">Comprar via WhatsApp</a>
       </div>
     </section>
-
-    <!-- Seção de Detalhes do Produto -->
+    
     <section class="detalhes-produto">
       <h2>Detalhes do Produto</h2>
-      <p>Sobre o tecido de nossas camisas (Algodão Egípcio):
-
-        O algodão egípcio é considerado um dos tipos mais finos e luxuosos de algodão do mundo. Ele é cultivado no Egito, especialmente ao longo do Rio Nilo, em um clima quente e úmido que é perfeito para o seu crescimento. Esse tipo de algodão é muito valorizado devido às suas fibras longas, que resultam em tecidos mais suaves, duráveis e com acabamento superior .
-        
-        
-         Aqui estão algumas características marcantes do algodão egípcio:
-        
-        - Fibras longas e finas: As fibras do algodão egípcio podem atingir até 5 cm de comprimento, muito mais longas do que as do algodão comum. Isso permite que o fio seja mais fino, o que gera tecidos mais leves e sedosos;
-        
-        - Toque suave e confortável: O algodão egípcio é muito suave ao toque e tem uma textura sedosa, que o torna agradável para o uso na pele, especialmente em roupas de cama, toalhas e roupas de alto padrão;
-        
-        - Maior durabilidade: Devido à sua fibra longa, o tecido de algodão egípcio é mais resistente ao desgaste, tornando-se mais durável e mantendo a qualidade por mais tempo. Ele também tende a ser menos propenso a formar bolinhas (pilling);
-        
-        - Absorção de umidade: Assim como outros tipos de algodão, o algodão egípcio tem excelente capacidade de absorver a umidade, o que o torna ideal para itens como toalhas, roupas de cama e para aquelas pessoas que transpiram muito, pois ajuda a manter a pele fresca e seca;
-        
-        - Acabamento mais refinado: Quando comparado ao algodão convencional, o algodão egípcio tem um acabamento mais refinado, oferecendo uma aparência e sensação de luxo, com um brilho sutil.</p>
+      <p>O algodão egípcio é considerado um dos tipos mais finos e luxuosos de algodão do mundo. Cultivado ao longo do Rio Nilo, esse tecido oferece um toque suave, alta durabilidade e um acabamento refinado.</p>
     </section>
-
   </main>
+
 
   <!-- Footer -->
   <footer class="footer">

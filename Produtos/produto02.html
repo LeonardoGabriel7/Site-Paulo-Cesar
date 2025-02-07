@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Produto</title>
+    <style>
+        /* CSS ORIGINAL COM ADAPTAÇÕES */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .product-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 20px;
+            display: flex;
+            gap: 40px;
+        }
+
+        .product-images {
+            flex: 1;
+        }
+
+        .main-image {
+            width: 100%;
+            height: 500px;
+            object-fit: contain;
+            border: 1px solid #ddd;
+            margin-bottom: 15px;
+            cursor: zoom-in;
+        }
+
+        .thumbnails {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .thumbnail {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .thumbnail.active {
+            border-color: #25D366;
+        }
+
+        .product-info {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .product-price {
+            font-size: 2rem;
+            color: #25D366;
+            margin-bottom: 1.5rem;
+            font-weight: bold;
+        }
+
+        .product-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* NOVO CSS PARA A SEÇÃO DO ALGODÃO */
+        .fabric-info {
+            background: #f8f8f8;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 2rem 0;
+            border-left: 4px solid #25D366;
+        }
+
+        .fabric-info h3 {
+            color: #333;
+            margin-bottom: 1rem;
+        }
+
+        .fabric-info ul {
+            padding-left: 20px;
+            list-style: none;
+        }
+
+        .fabric-info li {
+            margin-bottom: 0.8rem;
+            padding-left: 25px;
+            position: relative;
+        }
+
+        .fabric-info li:before {
+            content: "•";
+            color: #25D366;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .wpp-button {
+            background-color: #25D366;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 25px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .wpp-button:hover {
+            background-color: #128C7E;
+        }
+
+        @media (max-width: 768px) {
+            .product-container {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .main-image {
+                height: 300px;
+            }
+
+            .product-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="product-container">
+        <div class="product-images">
+            <img src="../imagens/camisas/camisa1-frente.png" alt="Camisa" class="main-image" id="mainImage">
+            <div class="thumbnails">
+                <img src="../imagens/camisas/camisa2-frente.png" alt="Miniatura 1" class="thumbnail active" onclick="changeImage(this)">
+                <img src="../imagens/camisas/camisa3-frente.png" alt="Miniatura 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="../imagens/camisas/camisa4-frente.png" alt="Miniatura 3" class="thumbnail" onclick="changeImage(this)">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1 class="product-title">NOME_DA_CAMISA</h1>
+            <p class="product-price">R$ PREÇO</p>
+            <p class="product-description">DESCRIÇÃO_DETALHADA</p>
+
+            <!-- Seção do Algodão Egípcio Adicionada Aqui -->
+            <div class="fabric-info">
+                <h3>👑 Sobre o Algodão Egípcio</h3>
+                <p>O algodão egípcio é considerado um dos tipos mais finos e luxuosos de algodão do mundo. Cultivado às margens do Rio Nilo, possui características excepcionais:</p>
+                <ul>
+                    <li>Fibras longas e finas (até 5cm de comprimento)</li>
+                    <li>Toque suave e textura sedosa</li>
+                    <li>Alta durabilidade e resistência</li>
+                    <li>Excelente absorção de umidade</li>
+                    <li>Acabamento premium com brilho sutil</li>
+                    <li>Resistente a bolinhas (pilling)</li>
+                </ul>
+                <p>Essas qualidades tornam nossas camisas mais confortáveis, duráveis e com caimento impecável.</p>
+            </div>
+
+            <button class="wpp-button" onclick="sendToWhatsApp()">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="24">
+                Comprar pelo WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Função para trocar a imagem principal
+        function changeImage(thumb) {
+            // Remove a classe 'active' de todas as miniaturas
+            document.querySelectorAll('.thumbnail').forEach(t => t.classList.remove('active'));
+            
+            // Adiciona 'active' na miniatura clicada
+            thumb.classList.add('active');
+            
+            // Atualiza a imagem principal
+            document.getElementById('mainImage').src = thumb.src;
+        }
+    
+        // Função para enviar mensagem pelo WhatsApp
+        function sendToWhatsApp() {
+            const productName = document.querySelector('.product-title').innerText;
+            const price = document.querySelector('.product-price').innerText;
+            const message = `Olá! Gostaria de comprar a ${productName} (${price}). Poderia confirmar a disponibilidade?`;
+            
+            // ATUALIZE COM SEU NÚMERO (formato: 5511999999999)
+            const whatsappUrl = `https://api.whatsapp.com/send?phone=SEU_NUMERO&text=${encodeURIComponent(message)}`;
+            
+            window.open(whatsappUrl, '_blank');
+        }
+    
+        // Zoom na imagem principal
+        document.getElementById('mainImage').addEventListener('click', function() {
+            this.classList.toggle('zoomed');
+        });
+    
+        // Navegação por teclado (setas esquerda/direita)
+        document.addEventListener('keydown', (e) => {
+            const thumbs = document.querySelectorAll('.thumbnail');
+            const currentIndex = Array.from(thumbs).findIndex(t => t.classList.contains('active'));
+            
+            if(e.key === 'ArrowRight' && currentIndex < thumbs.length - 1) {
+                changeImage(thumbs[currentIndex + 1]);
+            }
+            
+            if(e.key === 'ArrowLeft' && currentIndex > 0) {
+                changeImage(thumbs[currentIndex - 1]);
+            }
+        });
+    
+        // Adicione este CSS para o zoom (se ainda não tiver)
+        const style = document.createElement('style');
+        style.textContent = `
+            .zoomed {
+                transform: scale(2);
+                cursor: zoom-out;
+                z-index: 1000;
+                transition: transform 0.3s ease;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
