@@ -295,39 +295,20 @@ nav ul li a:hover {
   .patrocinador img {
     max-width: 100%; /* Imagem ocupa toda a largura do container */
   }
-   
-  h1.h1{
-    font-size: 27px;
+
+  .patrocinadores h1 {
+    font-size: 2em; /* Ajuste o valor conforme necessário */
   }
 }
 
-.botao-patrocinador {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #f00;
-  color: #fff;
-  font-size: 1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(255, 0, 0, 0.3);
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  text-align: center;
-  animation: pulsar 1.5s infinite; /* Animação de pulsação */
-}
-
-.botao-patrocinador:hover {
-  background-color: #d10000;
-  transform: scale(1.05);
-}
-
-/* Animação de pulsação */
-@keyframes pulsar {
-  0%, 100% {
-    transform: scale(1);
+/* Desabilitar o efeito hover em dispositivos móveis */
+@media (max-width: 480px) {
+  .patrocinadores h1 {
+    font-size: 1.5em; /* Menor para telas muito pequenas */
   }
-  50% {
-    transform: scale(1.1);
+
+  .patrocinador img:hover {
+    transform: none; /* Remove o efeito de transformação no hover em dispositivos móveis */
   }
 }
 
