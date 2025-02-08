@@ -28,6 +28,7 @@
             text-decoration: none;
             font-weight: bold;
             transition: background 0.3s ease;
+            
         }
 
         .back-button:hover {
@@ -72,7 +73,7 @@
             border: 2px solid transparent;
             transition: all 0.3s ease;
             padding: 5px;
-            background-color: #f8f8f8;
+            background-color: #FFFFFF;
            
         }
 
@@ -142,21 +143,42 @@
         }
 
         .wpp-button {
-            margin: 0 auto;
-            display: block;
-            background-color: #25D366;
-            color: white;
-            padding: 15px 40px;
-            border: none;
-            border-radius: 25px;
-            font-size: 1.2rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            transition: background-color 0.3s ease;
-        }
+    margin: 0 auto;
+    display: block;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 40px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    animation: pulse 1.5s infinite;
+}
 
+.wpp-button img {
+    width: 24px;
+}
+
+.wpp-button:hover {
+    background-color: #1DA851;
+}
+
+/* Animação de pulsação */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
         .wpp-button:hover {
             background-color: #128C7E;
         }
@@ -184,16 +206,21 @@
 
             .product-description{
                 text-align: center;
+                margin-top: -10px;
+                margin-bottom: -10px;
             }
         }
 
 
         @media (max-width: 768px) {
             .back-button {
-                top: 10px;
-                left: 25%;
-                padding: 8px 15px;
-                font-size: 0.9rem;
+                position: relative; /* Remove a posição absoluta no mobile */
+        display: block; /* Garante que ele ocupe toda a largura disponível */
+        margin: 0 auto 20px; /* Centraliza horizontalmente e adiciona espaçamento abaixo */
+        text-align: center; /* Garante que o texto fique alinhado */
+        width: fit-content; /* Mantém o tamanho ajustado ao conteúdo */
+        left: auto; /* Remove qualquer deslocamento lateral */
+        top: 10; /* Remove o deslocamento superior */
             }
         }
     </style>
@@ -205,8 +232,8 @@
             <img src="../imagens/camisas/camisa1-frente.png" alt="Camisa" class="main-image" id="mainImage">
             <div class="thumbnails">
                 <img src="../imagens/camisas/camisa2-frente.png" alt="Miniatura 1" class="thumbnail active" onclick="changeImage(this)">
-                <img src="../imagens/camisas/camisa3-frente.png" alt="Miniatura 2" class="thumbnail" onclick="changeImage(this)">
-                <img src="../imagens/camisas/camisa4-frente.png" alt="Miniatura 3" class="thumbnail" onclick="changeImage(this)">
+                <img src="../imagens/camisas/camisa2-verso.png" alt="Miniatura 2" class="thumbnail" onclick="changeImage(this)">
+                <img src="../imagens/camisas/arte_punto_branco.png" alt="Miniatura 3" class="thumbnail" onclick="changeImage(this)">
             </div>
         </div>
 
