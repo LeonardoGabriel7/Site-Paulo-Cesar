@@ -17,6 +17,23 @@
             background-color: black;
         }
 
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #cc0000;
+        }
+
         .product-container {
             max-width: 1200px;
             margin: 2rem auto;
@@ -72,6 +89,7 @@
             font-size: 2.5rem;
             margin-bottom: 1rem;
             color: #fff;
+            
         }
 
         .product-price {
@@ -79,9 +97,11 @@
             color: #ff0000; 
             margin-bottom: 1.5rem;
             font-weight: bold;
+            
         }
 
         .product-description {
+            
             font-size: 1.1rem;
             line-height: 1.6;
             color: #fff;
@@ -122,6 +142,8 @@
         }
 
         .wpp-button {
+            margin: 0 auto;
+            display: block;
             background-color: #25D366;
             color: white;
             padding: 15px 40px;
@@ -150,12 +172,34 @@
             }
 
             .product-title {
-                font-size: 2rem;
+                font-size: 1.7rem;
+                text-align: center;
+                margin-top: -35px;
+            }
+
+            .product-price{
+                text-align: center;
+                margin-top: -10px;
+            }
+
+            .product-description{
+                text-align: center;
+            }
+        }
+
+
+        @media (max-width: 768px) {
+            .back-button {
+                top: 10px;
+                left: 25%;
+                padding: 8px 15px;
+                font-size: 0.9rem;
             }
         }
     </style>
 </head>
 <body>
+    <a href="../index.html" class="back-button">← Voltar para Home</a>
     <div class="product-container">
         <div class="product-images">
             <img src="../imagens/camisas/camisa1-frente.png" alt="Camisa" class="main-image" id="mainImage">
@@ -169,12 +213,14 @@
         <div class="product-info">
             <h1 class="product-title">Blusa Punto Preta</h1>
             <p class="product-price">R$ 50,00</p>
-            <p class="product-description">DESCRIÇÃO_DETALHADA</p>
+            <p class="product-description">Blusa premium em algodão egípcio. Disponível em tamanhos do <br>
+                P ao GG.</p>
 
             <!-- Seção do Algodão Egípcio Adicionada Aqui -->
             <div class="fabric-info">
                 <h3>👑 Sobre o Algodão Egípcio</h3>
                 <p>O algodão egípcio é considerado um dos tipos mais finos e luxuosos de algodão do mundo. Cultivado às margens do Rio Nilo, possui características excepcionais:</p>
+                <br>
                 <ul>
                     <li>Fibras longas e finas (até 5cm de comprimento)</li>
                     <li>Toque suave e textura sedosa</li>

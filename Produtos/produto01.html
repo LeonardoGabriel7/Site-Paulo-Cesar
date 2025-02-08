@@ -17,6 +17,24 @@
             font-family: Arial, sans-serif;
         }
 
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #ff0000;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .back-button:hover {
+            background-color: #cc0000;
+        }
+
+
         /* HEADER */
         header {
             background-color: #fff; /* Cabeçalho preto */
@@ -270,12 +288,16 @@
             color: #aaa;
         }
 
+
+
+        
+
     </style>
 </head>
 <body>
-
   <!-- HEADER -->
   <header>
+
     <div class="logo">
         <img src="../imagens/logo paulo.jpg" alt="Logo Paulo Scárdua">
     </div>
@@ -290,9 +312,12 @@
       </ul>
     </nav>
   </header>
-
+  
   <!-- PAGINA DO PRODUTO -->
+
+
   <main class="produto-page">
+    <a href="../index.html" class="back-button">← Voltar para Home</a>
     <section class="produto-details">
       <div class="imagem-container">
         <img src="../imagens/camisas/camisa1-frente.png" alt="Blusa Punto Preta - Frente" class="imagem-produto" id="imgProduto">
@@ -307,7 +332,10 @@
     </section>
     
     <section class="detalhes-produto">
-      <h2>Detalhes do Produto</h2>
+      <h2>Blusa premium em algodão egípcio 200 fios, com acabamento em punto fino. Possui modelagem 
+        slim fit contemporânea, gola redonda e costuras reforçadas para maior durabilidade. Ideal 
+        para composições casuais diárias ou eventos mais sofisticados. Disponível em tamanhos do 
+        P ao GG, mantém a vivacidade da cor mesmo após múltiplas lavagens.</h2>
       <p>O algodão egípcio é considerado um dos tipos mais finos e luxuosos de algodão do mundo. Cultivado ao longo do Rio Nilo, esse tecido oferece um toque suave, alta durabilidade e um acabamento refinado.</p>
     </section>
   </main>
