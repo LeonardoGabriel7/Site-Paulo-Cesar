@@ -295,6 +295,10 @@ nav ul li a:hover {
   .patrocinador img {
     max-width: 100%; /* Imagem ocupa toda a largura do container */
   }
+   
+  h1.h1{
+    font-size: 27px;
+  }
 }
 
 .botao-patrocinador {
