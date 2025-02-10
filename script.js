@@ -17,7 +17,7 @@ function verMais(id) {
 
   // Exemplo de dados dos produtos (pode ser substituído por dados dinâmicos)
   const produtos = [
-      { titulo: "Camisa 1", imagem: "camisa1.jpg", descricao: "Descrição da Camisa 1.", preco: "R$ 50,00" },
+      { titulo: "Camisa 1", imagem: "camisa1.jpg", descricao: "Descrição da Camisa 1.", preco: "R$ 10,00" },
       { titulo: "Camisa 2", imagem: "camisa2.jpg", descricao: "Descrição da Camisa 2.", preco: "R$ 55,00" },
       { titulo: "Camisa 3", imagem: "camisa3.jpg", descricao: "Descrição da Camisa 3.", preco: "R$ 60,00" },
       { titulo: "Camisa 4", imagem: "camisa4.jpg", descricao: "Descrição da Camisa 4.", preco: "R$ 65,00" },
