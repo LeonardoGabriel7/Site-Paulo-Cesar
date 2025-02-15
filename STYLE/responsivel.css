@@ -177,3 +177,56 @@
     height: 200px;
   }
 }
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .sobre {
+    padding: 20px 15px; /* Reduzir padding lateral */
+  }
+
+  .sobre h1 {
+    font-size: 2em; /* Título menor */
+    margin-top: 25px;
+  }
+
+  .conteudo-sobre {
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 25px; /* Espaçamento reduzido */
+  }
+
+  .imagem-sobre {
+    width: 90%; /* Controlar largura da imagem */
+    margin: 0 auto; /* Centralizar */
+  }
+
+  .imagem-sobre img {
+    max-width: 100%;
+  }
+
+  .texto-sobre {
+    padding: 0; /* Remover padding extra */
+    font-size: 1em; /* Tamanho de fonte menor */
+    line-height: 1.6; /* Espaçamento entre linhas ajustado */
+  }
+
+  .texto-sobre p {
+    margin-bottom: 15px; /* Espaço entre parágrafos */
+    text-align: left; /* Alinhamento à esquerda */
+    hyphens: auto; /* Hifenização para melhor quebra */
+  }
+
+  .botao-contato {
+    width: auto; /* Largura automática */
+    margin: 20px auto 0; /* Centralizar botão */
+    padding: 12px 25px; /* Padding ajustado */
+    font-size: 0.9em; /* Fonte menor */
+    display: block; /* Para centralizar */
+    margin-left: 0; /* Remover margem lateral */
+  }
+
+  .divider-bottom {
+    margin-top: 30px; /* Espaço reduzido após conteúdo */
+  }
+}
