@@ -159,4 +159,21 @@
     flex: 1 1 100%;
     max-width: 90%;
   }
+
+
+  
+}
+
+@media (max-width: 768px) {
+  .zoom-container .caneca {
+    width: 80% !important; /* Reduz o tamanho da imagem */
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .zoom-container {
+    width: 200px; /* Reduz o container para evitar cortes */
+    height: 200px;
+  }
 }
