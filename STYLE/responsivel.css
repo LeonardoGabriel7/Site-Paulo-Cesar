@@ -45,9 +45,15 @@
     align-items: center; /* Centraliza verticalmente */
   }
 
-  .logo img{
-    width: 150px;
-    height: 10px;
+  .logo img {
+    width: 120px; /* Reduzindo de 150px */
+    height: 20PX; 
+    margin-left: 15px; /* Espaço consistente à esquerda */
+  }
+
+  /* Opcional: ajustar padding do container se necessário */
+  .logo {
+    padding: 5px 0; /* Espaço vertical reduzido */
   }
 
 }
