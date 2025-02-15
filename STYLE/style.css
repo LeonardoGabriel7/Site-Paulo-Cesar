@@ -471,12 +471,14 @@ nav ul li a:hover {
   margin: 0;
   padding: 0;
   list-style: none;
+  margin-bottom: 7px;
 }
 
 .footer-section a {
   color: white; /* Links em branco */
   text-decoration: none;
   transition: color 0.3s;
+  margin-bottom: 7px;
 }
 
 .footer-section a:hover {
@@ -505,5 +507,5 @@ nav ul li a:hover {
 
 .footer-bottom p {
   margin: 0;
-  font-size: 0.9em;
+  font-size: 1em;
 }
