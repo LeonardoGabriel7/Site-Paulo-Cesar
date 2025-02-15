@@ -48,7 +48,7 @@
   .logo img {
     width: 120px; /* Reduzindo de 150px */
     height: 20PX; 
-    margin-left: 15px; /* Espaço consistente à esquerda */
+    margin-left: 20px; /* Espaço consistente à esquerda */
   }
 
   /* Opcional: ajustar padding do container se necessário */
