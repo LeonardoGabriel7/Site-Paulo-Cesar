@@ -1,24 +1,27 @@
 @media (max-width: 768px) {
   /* Torna o menu hambúrguer visível */
   .menu-toggle {
-    display: block; /* Exibe o ícone apenas no modo responsivo */
+    display: block;
     font-size: 2em;
     cursor: pointer;
     color: red;
-    margin-right: 10px; /* Espaço do lado direito */
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
   }
 
   /* Esconde o menu inicialmente */
   nav ul {
-    display: none; /* Oculta o menu no início */
-    flex-direction: column; /* Itens em coluna */
-    background-color: white; /* Fundo branco para o menu */
+    display: none;
+    flex-direction: column;
+    background-color: white;
     position: absolute;
-    top: 60px; /* Posicionado abaixo do header */
-    right: 0; /* Alinhado à direita */
-    width: 100%; /* O menu ocupa toda a largura */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar */
-    z-index: 1000; /* Certifica que fica acima de outros elementos */
+    top: 60px;
+    right: 0;
+    width: 100%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
 
   /* Mostra o menu ao clicar no ícone */
@@ -28,34 +31,36 @@
 
   /* Estilos dos itens no menu */
   nav ul li {
-    margin: 10px 0; /* Espaço entre os itens */
-    text-align: center; /* Centraliza os itens */
+    margin: 10px 0;
+    text-align: center;
   }
 
   nav ul li a {
-    color: black; /* Cor preta para os links */
+    color: black;
     font-size: 1.1em;
     text-decoration: none;
     padding: 10px;
   }
 
   header {
-    height: 90px;
-    justify-content: space-between; /* Alinha a logo e o ícone */
-    align-items: center; /* Centraliza verticalmente */
+    height: 80px; /* Reduzi um pouco a altura do header */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
   }
 
   .logo img {
-    width: 120px; /* Reduzindo de 150px */
-    height: 20PX; 
-    margin-left: 20px; /* Espaço consistente à esquerda */
+    width: 100px; /* Reduzi um pouco mais a largura da logo */
+    height: auto; /* Mantém a proporção */
   }
 
-  /* Opcional: ajustar padding do container se necessário */
+  /* Ajusta o padding do container da logo */
   .logo {
-    padding: 5px 0; /* Espaço vertical reduzido */
+    padding: 5px 0;
+    margin-left: 20px;
   }
-
 }
 
 /* MAIN */
