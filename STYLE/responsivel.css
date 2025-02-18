@@ -6,7 +6,7 @@
     cursor: pointer;
     color: red;
     position: absolute;
-    right: 20px;
+    right: 25px; /* Movido um pouco para a esquerda */
     top: 50%;
     transform: translateY(-50%);
   }
@@ -17,7 +17,7 @@
     flex-direction: column;
     background-color: white;
     position: absolute;
-    top: 60px;
+    top: 65px; /* Ajustado para acompanhar o header maior */
     right: 0;
     width: 100%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,7 +43,7 @@
   }
 
   header {
-    height: 80px; /* Reduzi um pouco a altura do header */
+    height: 90px; /* Aumentado um pouco para dar mais espaço */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,16 +52,17 @@
   }
 
   .logo img {
-    width: 100px; /* Reduzi um pouco mais a largura da logo */
-    height: auto; /* Mantém a proporção */
+    width: 100px; /* Mantive o tamanho reduzido da logo */
+    height: auto;
   }
 
   /* Ajusta o padding do container da logo */
   .logo {
-    padding: 5px 0;
+    padding: 8px 0; /* Ajustei um pouco para melhor alinhamento */
     margin-left: 20px;
   }
 }
+
 
 /* MAIN */
 
