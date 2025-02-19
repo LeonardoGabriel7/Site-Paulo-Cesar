@@ -26,12 +26,9 @@ function verMais(id) {
   ];
 
  
-
   // Exibe o modal
   modal.style.display = "block";
 }
-
-
 
 document.querySelectorAll('.zoom-container img').forEach(img => {
   img.addEventListener('mousemove', function (e) {
@@ -46,9 +43,6 @@ document.querySelectorAll('.zoom-container img').forEach(img => {
       this.style.transformOrigin = `${moveX}% ${moveY}%`;
   });
 });
-
-
-
 
 // Função para trocar entre as imagens (frente e verso)
 function trocarImagem(botao, direcao) {
@@ -66,9 +60,6 @@ function trocarImagem(botao, direcao) {
     imagemVerso.style.display = 'none';
   }
 }
-
-
-
 
 
 // descer devagar na parte sobre

@@ -1,4 +1,5 @@
 @media (max-width: 768px) {
+
   /* Torna o menu hambúrguer visível */
   .menu-toggle {
     display: block;
@@ -6,7 +7,8 @@
     cursor: pointer;
     color: red;
     position: absolute;
-    right: 25px; /* Movido um pouco para a esquerda */
+    right: 25px;
+    /* Movido um pouco para a esquerda */
     top: 50%;
     transform: translateY(-50%);
   }
@@ -17,7 +19,8 @@
     flex-direction: column;
     background-color: white;
     position: absolute;
-    top: 65px; /* Ajustado para acompanhar o header maior */
+    top: 65px;
+    /* Ajustado para acompanhar o header maior */
     right: 0;
     width: 100%;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -43,7 +46,8 @@
   }
 
   header {
-    height: 90px; /* Aumentado um pouco para dar mais espaço */
+    height: 90px;
+    /* Aumentado um pouco para dar mais espaço */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -52,13 +56,15 @@
   }
 
   .logo img {
-    width: 100px; /* Mantive o tamanho reduzido da logo */
+    width: 100px;
+    /* Mantive o tamanho reduzido da logo */
     height: auto;
   }
 
   /* Ajusta o padding do container da logo */
   .logo {
-    padding: 8px 0; /* Ajustei um pouco para melhor alinhamento */
+    padding: 8px 0;
+    /* Ajustei um pouco para melhor alinhamento */
     margin-left: 20px;
   }
 }
@@ -121,71 +127,55 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
 /* Responsividade SOMENTE para celulares */
 @media (max-width: 768px) {
   .imagens-patrocinadores {
-    flex-direction: column; /* Muda para coluna em telas menores */
+    flex-direction: column;
+    /* Muda para coluna em telas menores */
     align-items: center;
     gap: 30px;
   }
 
   .patrocinador {
-    width: 100%; /* Mantém largura fixa para alinhamento */
+    width: 100%;
+    /* Mantém largura fixa para alinhamento */
     max-width: 250px;
   }
 
   .patrocinador img {
-    width: 100%; /* Ajusta a imagem para o tamanho correto */
+    width: 100%;
+    /* Ajusta a imagem para o tamanho correto */
     max-width: 240px;
   }
 }
-
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 768px) {
   .produtos-container {
     flex-direction: column;
     align-items: center;
   }
+
   .produto {
     flex: 1 1 100%;
     max-width: 90%;
   }
 
 
-  
+
 }
 
 @media (max-width: 768px) {
   .zoom-container .caneca {
-    width: 80% !important; /* Reduz o tamanho da imagem */
+    width: 80% !important;
+    /* Reduz o tamanho da imagem */
     height: auto !important;
     display: block;
     margin: 0 auto;
   }
 
   .zoom-container {
-    width: 200px; /* Reduz o container para evitar cortes */
+    width: 200px;
+    /* Reduz o container para evitar cortes */
     height: 200px;
   }
 }
@@ -194,23 +184,28 @@
 /* Responsividade */
 @media (max-width: 768px) {
   .sobre {
-    padding: 20px 15px; /* Reduzir padding lateral */
+    padding: 20px 15px;
+    /* Reduzir padding lateral */
   }
 
   .sobre h1 {
-    font-size: 2em; /* Título menor */
+    font-size: 2em;
+    /* Título menor */
     margin-top: 25px;
   }
 
   .conteudo-sobre {
     flex-direction: column;
     gap: 25px;
-    margin-top: 25px; /* Espaçamento reduzido */
+    margin-top: 25px;
+    /* Espaçamento reduzido */
   }
 
   .imagem-sobre {
-    width: 90%; /* Controlar largura da imagem */
-    margin: 0 auto; /* Centralizar */
+    width: 90%;
+    /* Controlar largura da imagem */
+    margin: 0 auto;
+    /* Centralizar */
   }
 
   .imagem-sobre img {
@@ -218,27 +213,40 @@
   }
 
   .texto-sobre {
-    padding: 0; /* Remover padding extra */
-    font-size: 1em; /* Tamanho de fonte menor */
-    line-height: 1.6; /* Espaçamento entre linhas ajustado */
+    padding: 0;
+    /* Remover padding extra */
+    font-size: 1em;
+    /* Tamanho de fonte menor */
+    line-height: 1.6;
+    /* Espaçamento entre linhas ajustado */
   }
 
   .texto-sobre p {
-    margin-bottom: 15px; /* Espaço entre parágrafos */
-    text-align: left; /* Alinhamento à esquerda */
-    hyphens: auto; /* Hifenização para melhor quebra */
+    margin-bottom: 15px;
+    /* Espaço entre parágrafos */
+    text-align: left;
+    /* Alinhamento à esquerda */
+    hyphens: auto;
+    /* Hifenização para melhor quebra */
   }
 
   .botao-contato {
-    width: auto; /* Largura automática */
-    margin: 20px auto 0; /* Centralizar botão */
-    padding: 12px 25px; /* Padding ajustado */
-    font-size: 0.9em; /* Fonte menor */
-    display: block; /* Para centralizar */
-    margin-left: 0; /* Remover margem lateral */
+    width: auto;
+    /* Largura automática */
+    margin: 20px auto 0;
+    /* Centralizar botão */
+    padding: 12px 25px;
+    /* Padding ajustado */
+    font-size: 0.9em;
+    /* Fonte menor */
+    display: block;
+    /* Para centralizar */
+    margin-left: 0;
+    /* Remover margem lateral */
   }
 
   .divider-bottom {
-    margin-top: 30px; /* Espaço reduzido após conteúdo */
+    margin-top: 30px;
+    /* Espaço reduzido após conteúdo */
   }
 }
